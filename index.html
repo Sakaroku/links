@@ -38,33 +38,27 @@
     .divider {
       width: 52px;
       height: 1px;
-      background: rgba(255, 255, 255, 0.22);
-      margin: 0 auto 66px;
+      background: rgba(243, 238, 229, 0.35);
+      margin: 0 auto 38px;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
     .link-card {
-      width: 100%;
-      min-height: 82px;
-
-      display: grid;
-      grid-template-columns: 34px 1fr 24px;
+      display: flex;
       align-items: center;
-
-      padding: 18px 22px;
-
-      text-decoration: none;
-      color: #f3eee5;
-
+      width: 100%;
+      min-height: 74px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
       background: rgba(255, 255, 255, 0.035);
-      border: 1px solid rgba(220, 190, 150, 0.18);
-      border-radius: 16px;
-
+      color: #f3eee5;
+      text-decoration: none;
       transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -72,45 +66,58 @@
     }
 
     .link-card:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(220, 190, 150, 0.34);
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
     }
 
     .icon {
-      width: 26px;
-      text-align: center;
-      color: #d8c09a;
-      font-size: 20px;
+      width: 46px;
+      min-width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 22px;
+      font-family: monospace;
     }
 
     .text {
+      flex: 1;
       min-width: 0;
-      padding-left: 10px;
     }
 
     .title {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.15;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
       margin-bottom: 4px;
     }
 
     .subtitle {
       font-size: 13px;
-      line-height: 1.2;
-      color: #99919b;
+      color: rgba(243, 238, 229, 0.58);
     }
 
     .arrow {
-      text-align: right;
-      color: #77717a;
+      margin-left: 14px;
       font-size: 18px;
+      color: rgba(243, 238, 229, 0.45);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 42px;
+      font-size: 12px;
+      color: rgba(243, 238, 229, 0.35);
     }
 
     @media (max-width: 600px) {
       .page {
-        padding: 36px 18px 50px;
+        padding: 38px 16px 55px;
       }
 
       .logo {
@@ -118,18 +125,24 @@
         letter-spacing: 8px;
       }
 
-      .divider {
-        margin-bottom: 45px;
+      .link-card {
+        min-height: 70px;
+        padding: 12px 14px;
       }
 
-      .link-card {
-        min-height: 78px;
-        padding: 16px 18px;
-        grid-template-columns: 32px 1fr 20px;
+      .icon {
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        margin-right: 14px;
       }
 
       .title {
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      .subtitle {
+        font-size: 12px;
       }
     }
   </style>
@@ -145,131 +158,204 @@
     <div class="links">
 
       <!-- ARTIST CREDITS -->
-      <a class="link-card"
-         href="https://sakaroku.github.io/credits/">
-        <div class="icon">♫</div>
+      <a
+        class="link-card"
+        href="https://sakaroku.github.io/credits/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">✦</div>
+
         <div class="text">
           <div class="title">Artist Credits</div>
           <div class="subtitle">Artists featured on Sakaroku Radio</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
+
 
       <!-- YOUTUBE -->
-      <a class="link-card"
-         href="https://www.youtube.com/@Sakaroku"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">▣</div>
+      <a
+        class="link-card"
+        href="https://www.youtube.com/@Sakaroku"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">▶</div>
+
         <div class="text">
           <div class="title">YouTube</div>
-          <div class="subtitle">Sakaroku &amp; Sakaroku Radio</div>
+          <div class="subtitle">Sakaroku Radio</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- SOUNDCLOUD -->
-      <a class="link-card"
-         href="https://soundcloud.com/sakaroku"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="link-card"
+        href="https://soundcloud.com/sakaroku"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div class="icon">☁</div>
+
         <div class="text">
           <div class="title">SoundCloud</div>
           <div class="subtitle">Listen on SoundCloud</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
+
+
+      <!-- BANDCAMP -->
+      <a
+        class="link-card"
+        href="https://sakaroku.bandcamp.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">♬</div>
+
+        <div class="text">
+          <div class="title">Bandcamp</div>
+          <div class="subtitle">Listen on Bandcamp</div>
+        </div>
+
+        <div class="arrow">↗</div>
+      </a>
+
 
       <!-- SPOTIFY -->
-      <a class="link-card"
-         href="https://open.spotify.com/artist/0kxCmMXOb0omXBHrPDNb0G"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">▤</div>
+      <a
+        class="link-card"
+        href="https://open.spotify.com/artist/0kxCmMXOb0omXBHrPDNb0G"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">♫</div>
+
         <div class="text">
           <div class="title">Spotify</div>
-          <div class="subtitle">Listen to Sakaroku</div>
+          <div class="subtitle">Listen on Spotify</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- APPLE MUSIC -->
-      <a class="link-card"
-         href="https://music.apple.com/us/artist/sakaroku/6809411984"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">♫</div>
+      <a
+        class="link-card"
+        href="https://music.apple.com/artist/6809411984"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">♪</div>
+
         <div class="text">
           <div class="title">Apple Music</div>
           <div class="subtitle">Listen on Apple Music</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- TIDAL -->
-      <a class="link-card"
-         href="https://tidal.com/artist/85571171"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="link-card"
+        href="https://tidal.com/artist/85571171"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div class="icon">◆</div>
+
         <div class="text">
           <div class="title">TIDAL</div>
           <div class="subtitle">Listen on TIDAL</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- INSTAGRAM -->
-      <a class="link-card"
-         href="https://instagram.com/sakarokuradio"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">▣</div>
+      <a
+        class="link-card"
+        href="https://www.instagram.com/sakarokuradio/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">◎</div>
+
         <div class="text">
           <div class="title">Instagram</div>
           <div class="subtitle">@sakarokuradio</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- X -->
-      <a class="link-card"
-         href="https://x.com/sakarokuradio"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">𝕏</div>
+      <a
+        class="link-card"
+        href="https://x.com/sakarokuradio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">X</div>
+
         <div class="text">
           <div class="title">X</div>
           <div class="subtitle">@sakarokuradio</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+
       <!-- EMAIL -->
-      <a class="link-card"
-         href="mailto:sakaroku@proton.me">
+      <a
+        class="link-card"
+        href="mailto:sakaroku@proton.me"
+      >
         <div class="icon">✉</div>
+
         <div class="text">
           <div class="title">Email</div>
           <div class="subtitle">sakaroku@proton.me</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
-      <!-- SUPPORT SAKAROKU -->
-      <a class="link-card"
-         href="https://PayPal.me/sakaroku"
-         target="_blank"
-         rel="noopener noreferrer">
-        <div class="icon">P</div>
+
+      <!-- SUPPORT -->
+      <a
+        class="link-card"
+        href="https://PayPal.me/sakaroku"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">♥</div>
+
         <div class="text">
           <div class="title">Support Sakaroku</div>
-          <div class="subtitle">Support the radio via PayPal</div>
+          <div class="subtitle">Support the radio</div>
         </div>
+
         <div class="arrow">↗</div>
       </a>
 
+    </div>
+
+    <div class="footer">
+      Sakaroku
     </div>
 
   </main>
